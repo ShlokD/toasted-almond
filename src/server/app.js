@@ -14,6 +14,5 @@ const render = require('./ssr.js').render;
 
 app.get('/', (req, res) => {
   const response = render('React SSR with Vanilla JS on client');
-  res.setHeader('Cache-Control', 'assets, max-age=604800');
   res.send(response);
 });
